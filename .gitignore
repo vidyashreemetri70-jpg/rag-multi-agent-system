@@ -1,0 +1,9 @@
+﻿__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+backend/data/vector_store/
+backend/data/uploads/
+
