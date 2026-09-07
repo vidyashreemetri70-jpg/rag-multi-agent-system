@@ -465,3 +465,80 @@ The implemented classification logic was tested using different query types.
 | Tell me about it | Ambiguous | Correct |
 
 The Query Understanding Agent successfully classified the tested queries with a confidence score of 0.9.
+
+## 16. Retrieval Agent
+
+The Retrieval Agent receives the user query and performs semantic vector search against the ChromaDB knowledge base.
+
+The agent:
+- Converts the query into an embedding using Sentence Transformers.
+- Retrieves the Top-K relevant document chunks.
+- Uses vector distance to identify the most relevant results.
+- Applies a relevance threshold to filter low-relevance results.
+- Preserves document metadata and retrieval distances.
+- Returns an empty result when no relevant information is available.
+
+The implemented Retrieval Agent uses Top-3 retrieval by default with a configurable distance threshold of 1.5.
+
+Example testing:
+
+| Query | Retrieval Result | Status |
+|---|---|---|
+| What happens when soil moisture becomes low? | Relevant Smart Agriculture chunks retrieved | Passed |
+| What is the capital of France? | No relevant knowledge-base information used | Passed |
+
+
+## 17. Response Generation Agent
+
+The Response Generation Agent generates the final answer using the information retrieved from the knowledge base.
+
+The agent:
+- Receives the user query and retrieved document chunks.
+- Builds a context-based prompt.
+- Uses the local Llama 3.2 model through Ollama.
+- Generates a clear and knowledge-grounded response.
+- Avoids generating information that is not available in the knowledge base.
+- Returns a standard message when the required information is not found.
+
+The implemented Response Generation Agent was tested with factual and procedural queries and successfully generated knowledge-grounded responses.
+
+
+
+## 18. Multi-Agent Orchestration
+
+The Multi-Agent Orchestrator coordinates the different agents involved in query processing.
+
+The implemented workflow is:
+
+User Query → Query Understanding Agent → Retrieval Agent → Response Generation Agent → Final Answer
+
+The orchestrator:
+- Receives the user query.
+- Sends the query to the Query Understanding Agent.
+- Passes the query to the Retrieval Agent.
+- Sends the retrieved information to the Response Generation Agent.
+- Returns the final knowledge-grounded response.
+- Handles cases where no relevant documents are retrieved.
+
+The implemented orchestration was tested successfully using factual, procedural, comparative, ambiguous, and unavailable-information queries.
+
+
+
+## 19. M2 Testing and Validation
+
+The implemented multi-agent query resolution system was tested using different types of user queries.
+
+| Query Type | Example | Result |
+|---|---|---|
+| Factual | What happens when soil moisture becomes low? | Passed |
+| Procedural | How can irrigation be activated when soil moisture is low? | Passed |
+| Comparative | What is the difference between a soil moisture sensor and an irrigation system? | Passed |
+| Ambiguous | Tell me about it | Passed |
+| Unavailable Information | What is the capital of France? | Passed |
+
+The system successfully classified queries, retrieved relevant information, generated grounded responses, and handled unavailable information without generating unsupported answers.
+
+
+## 20. M2 Conclusion
+
+Milestone 2 successfully implemented the basic multi-agent query resolution workflow. The Query Understanding Agent classifies user queries, the Retrieval Agent performs semantic search, and the Response Generation Agent produces knowledge-grounded answers. The Multi-Agent Orchestrator connects these components and handles different query scenarios, including unavailable information. The implemented system provides a foundation for further improvements such as advanced clarification, conversation memory, and retrieval accuracy evaluation.
