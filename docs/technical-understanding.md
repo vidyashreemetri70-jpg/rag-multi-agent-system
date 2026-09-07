@@ -443,6 +443,7 @@ At the completion of M1.1, the team will have:
 9) Documented architecture and technology decisions.
 
 
+# M2 — Multi-Agent Query Resolution
 
 ## 15. Query Understanding Agent
 
@@ -466,6 +467,7 @@ The implemented classification logic was tested using different query types.
 
 The Query Understanding Agent successfully classified the tested queries with a confidence score of 0.9.
 
+
 ## 16. Retrieval Agent
 
 The Retrieval Agent receives the user query and performs semantic vector search against the ChromaDB knowledge base.
@@ -486,6 +488,7 @@ Example testing:
 |---|---|---|
 | What happens when soil moisture becomes low? | Relevant Smart Agriculture chunks retrieved | Passed |
 | What is the capital of France? | No relevant knowledge-base information used | Passed |
+
 
 
 ## 17. Response Generation Agent
@@ -542,3 +545,6 @@ The system successfully classified queries, retrieved relevant information, gene
 ## 20. M2 Conclusion
 
 Milestone 2 successfully implemented the basic multi-agent query resolution workflow. The Query Understanding Agent classifies user queries, the Retrieval Agent performs semantic search, and the Response Generation Agent produces knowledge-grounded answers. The Multi-Agent Orchestrator connects these components and handles different query scenarios, including unavailable information. The implemented system provides a foundation for further improvements such as advanced clarification, conversation memory, and retrieval accuracy evaluation.
+
+
+

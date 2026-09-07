@@ -25,7 +25,8 @@ def add_documents(chunks, embeddings, document_name="unknown", file_type="unknow
 def search_documents(query_embedding, n_results=3):
     results = collection.query(
         query_embeddings=[query_embedding],
-        n_results=n_results
+        n_results=n_results,
+        include=["documents", "metadatas", "distances"]
     )
 
     return results
