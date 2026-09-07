@@ -441,3 +441,27 @@ At the completion of M1.1, the team will have:
 7) A proposed Web Speech API integration approach.
 8) A defined technology stack.
 9) Documented architecture and technology decisions.
+
+
+
+## 15. Query Understanding Agent
+
+The Query Understanding Agent analyzes the user query and classifies it into four categories:
+
+1. Factual
+2. Procedural
+3. Comparative
+4. Ambiguous
+
+The agent also assigns a confidence score and passes the classified query to the next stage of the pipeline.
+
+The implemented classification logic was tested using different query types.
+
+| Query | Classification | Result |
+|---|---|---|
+| What happens when soil moisture becomes low? | Factual | Correct |
+| How can irrigation be activated when soil moisture is low? | Procedural | Correct |
+| What is the difference between a soil moisture sensor and an irrigation system? | Comparative | Correct |
+| Tell me about it | Ambiguous | Correct |
+
+The Query Understanding Agent successfully classified the tested queries with a confidence score of 0.9.
