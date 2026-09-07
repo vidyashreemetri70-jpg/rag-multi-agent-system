@@ -1,17 +1,16 @@
 # Multi-Agent RAG System
 
-A Multi-Agent Retrieval-Augmented Generation (RAG) system with knowledge base ingestion, semantic retrieval, query resolution, conversation memory, and voice interaction.
+A Multi-Agent Retrieval-Augmented Generation (RAG) system with knowledge base ingestion, semantic retrieval, query understanding, response generation, and multi-agent orchestration.
 
 ## Project Objective
 
-The objective of this project is to develop an AI-Based Knowledge Retrieval Platform with Query Resolution System that can retrieve relevant information from uploaded documents and generate accurate responses.
+The objective of this project is to develop an AI-Based Knowledge Retrieval Platform with Query Resolution System that can retrieve relevant information from uploaded documents and generate accurate, knowledge-grounded responses.
 
 ## Milestone 1
 
 Milestone 1 focuses on:
 
 * RAG architecture and retrieval pipeline
-* Multi-agent query resolution
 * Knowledge base ingestion
 * Document text extraction
 * Data cleaning and chunking
@@ -20,8 +19,23 @@ Milestone 1 focuses on:
 * Semantic search
 * Query understanding
 * Response generation
-* Conversation memory
-* Clarification handling
+* System architecture and agent design
+
+## Milestone 2
+
+Milestone 2 focuses on implementing the multi-agent query resolution system:
+
+* Query Understanding Agent
+* Retrieval Agent
+* Response Generation Agent
+* Multi-Agent Orchestration
+* Query classification
+* Confidence scoring
+* Top-K semantic retrieval
+* Low-relevance result handling
+* Knowledge-grounded response generation
+* Source-based responses
+* Factual, procedural, comparative and ambiguous query handling
 
 ## Supported Documents
 
@@ -47,6 +61,26 @@ The system architecture is available in:
 4. Clarification Agent
 5. Conversation Memory Agent
 
+## Multi-Agent Query Flow
+
+User Query  
+↓  
+Query Understanding Agent  
+↓  
+Retrieval Agent  
+↓  
+Response Generation Agent  
+↓  
+Final Answer
+
+The Query Understanding Agent classifies the user query as factual, procedural, comparative, or ambiguous.
+
+The Retrieval Agent searches the vector database and retrieves the most relevant document chunks using semantic similarity.
+
+The Response Generation Agent generates a grounded response using the retrieved information and avoids unsupported information.
+
+The Multi-Agent Orchestrator manages the complete flow between the agents.
+
 ## Technology Stack
 
 ### Frontend
@@ -65,8 +99,10 @@ The system architecture is available in:
 
 - Large Language Model (LLM)
 - Embeddings
+- Sentence Transformers
 - Semantic Search
 - Retrieval-Augmented Generation (RAG)
+- Multi-Agent AI
 
 ### Document Processing
 
@@ -79,6 +115,7 @@ The system architecture is available in:
 
 ### Vector Database
 
+- ChromaDB
 - Vector Store
 
 ### Development Tools
@@ -86,6 +123,8 @@ The system architecture is available in:
 - Git
 - GitHub
 - Draw.io
+- VS Code
+- Ollama
 
 ## Project Documentation
 
@@ -95,4 +134,6 @@ Technical understanding and research are available in:
 
 ## Project Status
 
-Milestone 1 - Foundation and Knowledge Retrieval
+Milestone 1 - Foundation and Knowledge Retrieval - Completed
+
+Milestone 2 - Multi-Agent Query Resolution - In Progress
