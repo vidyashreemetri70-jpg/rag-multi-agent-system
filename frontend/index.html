@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Neural Knowledge Hub</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+</head>
+
+
+<body>
+
+    <!-- Background decoration -->
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+
+    <div class="app">
+
+
+        <!-- NAVBAR -->
+
+        <nav class="navbar">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    NK
+                </div>
+
+                <div>
+
+                    <h2>
+                        NEURAL CORE
+                    </h2>
+
+                    <span>
+                        Knowledge Intelligence Engine
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="system-status">
+
+                <span class="status-dot"></span>
+
+                AI ENGINE ACTIVE
+
+            </div>
+
+        </nav>
+
+
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="japanese-label">
+                    INTELLIGENT KNOWLEDGE ENGINE
+                </div>
+
+
+                <h1>
+
+                    Search.
+                    Understand.<br>
+
+                    <span>
+                        Generate.
+                    </span>
+
+                </h1>
+
+
+                <p>
+                    A Multi-Agent Retrieval-Augmented Intelligence Platform
+                </p>
+
+
+                <div class="hero-tags">
+
+                    <span>
+                        RAG ENGINE
+                    </span>
+
+                    <span>
+                        MULTI-AGENT
+                    </span>
+
+                    <span>
+                        VECTOR AI
+                    </span>
+
+                    <span>
+                        LLAMA 3.2
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-symbol">
+
+                <div class="circle">
+
+                    <span>
+                        AI
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- MAIN GRID -->
+
+        <div class="main-grid">
+
+
+            <!-- KNOWLEDGE INGESTION -->
+
+            <section class="card upload-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <span class="card-number">
+                            MODULE 01
+                        </span>
+
+                        <h2>
+                            Knowledge Ingestion
+                        </h2>
+
+                        <p>
+                            Build your private AI knowledge base
+                        </p>
+
+                    </div>
+
+
+                    <div class="card-icon">
+                        ◈
+                    </div>
+
+                </div>
+
+
+                <div class="upload-area">
+
+                    <div class="upload-symbol">
+                        +
+                    </div>
+
+
+                    <h3>
+                        Add Knowledge Source
+                    </h3>
+
+
+                    <p>
+                        PDF · DOCX · TXT · CSV
+                    </p>
+
+
+                    <input
+                        type="file"
+                        id="fileInput"
+                        accept=".pdf,.docx,.txt,.csv"
+                    >
+
+
+                    <label
+                        for="fileInput"
+                        class="file-button"
+                    >
+                        SELECT DOCUMENT
+                    </label>
+
+
+                    <button
+                        onclick="uploadFile()"
+                        class="primary-button"
+                    >
+                        BUILD KNOWLEDGE INDEX →
+                    </button>
+
+
+                    <div
+                        id="uploadStatus"
+                        class="status-message"
+                    ></div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- QUERY -->
+
+            <section class="card query-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <span class="card-number">
+                            MODULE 02
+                        </span>
+
+                        <h2>
+                            Neural Query
+                        </h2>
+
+                        <p>
+                            Ask questions from your knowledge base
+                        </p>
+
+                    </div>
+
+
+                    <div class="card-icon">
+                        ◉
+                    </div>
+
+                </div>
+
+
+                <div class="query-box">
+
+                    <label>
+                        QUERY INTERFACE
+                    </label>
+
+
+                    <!-- VOICE QUERY AREA -->
+
+                    <div class="voice-query-box">
+
+                        <textarea
+                            id="queryInput"
+                            placeholder="Type your question or use the microphone..."
+                        ></textarea>
+
+
+                        <button
+                            type="button"
+                            id="voiceButton"
+                            class="voice-button"
+                            onclick="startVoiceInput()"
+                            title="Speak your question"
+                        >
+                            🎙
+                        </button>
+
+                    </div>
+
+
+                    <button
+                        onclick="askQuestion()"
+                        class="primary-button ask-button"
+                    >
+
+                        RUN AI QUERY
+
+                        <span>
+                            →
+                        </span>
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- AI RESULT -->
+
+                <div
+                    id="result"
+                    class="result-box"
+                >
+
+                    <div class="empty-result">
+
+                        <span>
+                            ✦
+                        </span>
+
+                        <p>
+                            AI response will appear here.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+
+        <!-- PIPELINE -->
+
+        <section class="card pipeline-card">
+
+            <div class="pipeline-title">
+
+                <div>
+
+                    <span class="card-number">
+                        MODULE 03
+                    </span>
+
+                    <h2>
+                        Intelligence Pipeline
+                    </h2>
+
+                    <p>
+                        Multi-agent query resolution flow
+                    </p>
+
+                </div>
+
+
+                <span class="pipeline-live">
+                    ● LIVE
+                </span>
+
+            </div>
+
+
+            <div class="pipeline">
+
+
+                <div class="pipeline-node active">
+
+                    <div class="node-icon">
+                        Q
+                    </div>
+
+                    <strong>
+                        Query
+                    </strong>
+
+                    <small>
+                        User Input
+                    </small>
+
+                </div>
+
+
+                <div class="pipeline-line"></div>
+
+
+                <div class="pipeline-node">
+
+                    <div class="node-icon">
+                        U
+                    </div>
+
+                    <strong>
+                        Understanding
+                    </strong>
+
+                    <small>
+                        Intent Agent
+                    </small>
+
+                </div>
+
+
+                <div class="pipeline-line"></div>
+
+
+                <div class="pipeline-node">
+
+                    <div class="node-icon">
+                        R
+                    </div>
+
+                    <strong>
+                        Retrieval
+                    </strong>
+
+                    <small>
+                        Vector Search
+                    </small>
+
+                </div>
+
+
+                <div class="pipeline-line"></div>
+
+
+                <div class="pipeline-node">
+
+                    <div class="node-icon">
+                        G
+                    </div>
+
+                    <strong>
+                        Generation
+                    </strong>
+
+                    <small>
+                        Llama 3.2
+                    </small>
+
+                </div>
+
+
+                <div class="pipeline-line"></div>
+
+
+                <div class="pipeline-node final-node">
+
+                    <div class="node-icon">
+                        ✓
+                    </div>
+
+                    <strong>
+                        Response
+                    </strong>
+
+                    <small>
+                        AI Output
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- AGENTS -->
+
+        <section class="agents-section">
+
+
+            <div class="section-heading">
+
+                <span>
+                    SYSTEM ARCHITECTURE
+                </span>
+
+                <h2>
+                    Intelligence Modules
+                </h2>
+
+            </div>
+
+
+            <div class="agent-grid">
+
+
+                <div class="agent-card">
+
+                    <div class="agent-icon">
+                        01 / INTENT
+                    </div>
+
+                    <h3>
+                        Query Understanding
+                    </h3>
+
+                    <p>
+                        Identifies the user's intent and determines the query type.
+                    </p>
+
+                </div>
+
+
+
+                <div class="agent-card">
+
+                    <div class="agent-icon">
+                        02 / SEARCH
+                    </div>
+
+                    <h3>
+                        Retrieval Agent
+                    </h3>
+
+                    <p>
+                        Searches the vector database for semantically relevant knowledge.
+                    </p>
+
+                </div>
+
+
+
+                <div class="agent-card">
+
+                    <div class="agent-icon">
+                        03 / GENERATE
+                    </div>
+
+                    <h3>
+                        Response Generation
+                    </h3>
+
+                    <p>
+                        Creates grounded responses using retrieved document context.
+                    </p>
+
+                </div>
+
+
+
+                <div class="agent-card">
+
+                    <div class="agent-icon">
+                        04 / CONTROL
+                    </div>
+
+                    <h3>
+                        AI Orchestrator
+                    </h3>
+
+                    <p>
+                        Coordinates the complete query processing workflow.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <div>
+
+                <strong>
+                    NEURAL CORE
+                </strong>
+
+                <span>
+                    | AI Knowledge Retrieval Platform
+                </span>
+
+            </div>
+
+
+            <div>
+                Python · FastAPI · ChromaDB · Sentence Transformers · Ollama
+            </div>
+
+        </footer>
+
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
