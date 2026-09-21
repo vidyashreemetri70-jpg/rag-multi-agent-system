@@ -3,64 +3,92 @@ import requests
 
 def generate_response(query, retrieved_results):
 
-    context = "\n".join(retrieved_results)
+    # =====================================================
+    # RETRIEVED INFORMATION
+    # =====================================================
+
+    context = "\n".join(
+        retrieved_results
+    )
+
+    # =====================================================
+    # LLM PROMPT
+    # =====================================================
 
     prompt = f"""
 You are a document-based AI knowledge assistant.
 
-USER QUERY:
+CURRENT USER QUESTION:
 {query}
 
-RETRIEVED INFORMATION FROM UPLOADED DOCUMENT:
+RETRIEVED INFORMATION:
 {context}
 
-STRICT INSTRUCTIONS:
+IMPORTANT:
 
-1. Answer ONLY the USER QUERY given above.
+Answer ONLY the CURRENT USER QUESTION shown above.
 
-2. Use ONLY information from the RETRIEVED INFORMATION.
+Do NOT use previous questions.
+Do NOT create previous questions.
+Do NOT repeat previous questions.
+Do NOT split the current question.
+Do NOT create additional questions.
+Do NOT include conversation history.
+Do NOT mention the user's previous query.
 
-3. NEVER create additional questions.
+RULES:
 
-4. NEVER answer questions that the user did not ask.
+1. Answer only the current user question.
 
-5. NEVER guess or use outside knowledge.
+2. Use ONLY information from RETRIEVED INFORMATION.
 
-6. Do not invent information.
+3. Do NOT use outside knowledge.
 
-7. The answer must contain ONE numbered section only.
+4. Do NOT guess.
 
-8. Use this exact format:
+5. Do NOT invent information.
 
-1. {query}:
-- First important point from the uploaded document.
-- Second important point from the uploaded document.
-- Third important point from the uploaded document.
+6. If the retrieved information does not contain
+enough information to answer the question, write:
 
-9. Use bullet points only for the answer.
-
-10. If the uploaded document does not contain enough information to answer the query, return:
-
-1. {query}:
 - Information not found in the knowledge base.
 
-11. Do NOT add any extra questions.
+7. Keep the answer simple and direct.
 
-12. Do NOT add any extra answers.
+8. Do not include an introduction.
 
-13. Do NOT add text before or after the answer.
+9. Do not include a conclusion.
 
-14. Every statement must be supported by the uploaded document.
+10. Do not create numbered questions.
 
-Return ONLY the final answer.
+11. Do not create multiple questions.
+
+12. Return exactly this format:
+
+<current question>
+- <answer>
+
+Do not return anything else.
+
+CURRENT USER QUESTION:
+{query}
+
+Now answer ONLY this question.
 """
+
+    # =====================================================
+    # CALL OLLAMA
+    # =====================================================
 
     response = requests.post(
         "http://127.0.0.1:11434/api/generate",
         json={
             "model": "llama3.2",
             "prompt": prompt,
-            "stream": False
+            "stream": False,
+            "options": {
+                "temperature": 0
+            }
         }
     )
 
