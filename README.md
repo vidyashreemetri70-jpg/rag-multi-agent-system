@@ -131,9 +131,54 @@ The Multi-Agent Orchestrator manages the complete flow between the agents.
 Technical understanding and research are available in:
 
 `docs/technical-understanding.md`
+## Milestone 3
+
+Milestone 3 focuses on advanced interaction and response transparency:
+
+- Clarification Agent
+- Conversation Memory Agent
+- Ambiguous and incomplete query handling
+- Multi-turn conversations
+- Context-aware follow-up queries
+- Voice input using Web Speech API
+- Text-to-Speech response
+- Response transparency panel
+- Retrieved document and chunk information
+- Relevance scores and citation references
+
+## Milestone 4
+
+Milestone 4 focuses on analytics, knowledge-gap detection, end-to-end testing, and system optimization:
+
+- Query Analytics
+- Knowledge Gap Detection
+- Query classification analytics
+- Domain-wise analytics
+- Common query analysis
+- Unanswered and low-confidence query tracking
+- Retrieval performance analysis
+- End-to-end testing across three knowledge domains
+- Factual, procedural, comparative and ambiguous query testing
+- Multi-turn and context-aware query testing
+- Voice interaction testing
+- Retrieval optimization
+- Prompt optimization
+- Agent routing validation
+- Voice reliability validation
+- Performance and confidence analysis
+- Final technical documentation and project report
 
 ## Project Status
 
-Milestone 1 - Foundation and Knowledge Retrieval - Completed
+- Milestone 1 - Foundation and Knowledge Retrieval - **Completed**
+- Milestone 2 - Multi-Agent Query Resolution - **Completed**
+- Milestone 3 - Clarification, Conversation Memory, Voice and Transparency - **Completed**
+- Milestone 4 - Analytics, Knowledge Gap Detection, Testing and Optimization - **Completed**
 
-Milestone 2 - Multi-Agent Query Resolution - Completed
+## Final Project Result
+
+The project provides an AI-Based Knowledge Retrieval Platform that supports document ingestion, semantic retrieval, multi-agent query resolution, clarification, conversation memory, voice interaction, response transparency, query analytics and knowledge-gap detection.
+
+The system has been tested across **Artificial Intelligence, Agriculture/IoT and NLP** knowledge domains.
+
+
