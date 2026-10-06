@@ -6,15 +6,23 @@ def check_clarification(query):
     query = query.strip()
     query_lower = query.lower()
 
-    # Empty query
+    # ============================================================
+    # EMPTY QUERY
+    # ============================================================
+
     if not query:
+
         return {
             "needs_clarification": True,
             "clarification_type": "incomplete",
-            "question": "Could you please enter your question?"
+            "question":
+                "Could you please enter your question?"
         }
 
-    # Remove punctuation for word checking
+    # ============================================================
+    # REMOVE PUNCTUATION
+    # ============================================================
+
     clean_query = re.sub(
         r"[^\w\s]",
         "",
@@ -23,15 +31,23 @@ def check_clarification(query):
 
     words = clean_query.split()
 
-    # Very short / incomplete queries
+    # ============================================================
+    # VERY SHORT / INCOMPLETE QUERIES
+    # ============================================================
+
     if len(words) < 3:
+
         return {
             "needs_clarification": True,
             "clarification_type": "incomplete",
-            "question": "Could you please provide more details about your question?"
+            "question":
+                "Could you please provide more details about your question?"
         }
 
-    # Ambiguous reference words
+    # ============================================================
+    # AMBIGUOUS REFERENCE WORDS
+    # ============================================================
+
     ambiguous_words = [
         "it",
         "this",
@@ -52,7 +68,79 @@ def check_clarification(query):
                     "Could you please clarify what you are referring to?"
             }
 
-    # Multi-part query detection
+    # ============================================================
+    # BROAD / AMBIGUOUS TOPICS
+    # ============================================================
+
+    # These queries are too broad to determine the exact topic.
+    # They should trigger clarification instead of retrieval.
+
+    broad_topics = {
+
+        "sensor": (
+            "Could you clarify which type of sensor you mean? "
+            "For example, a soil moisture sensor, temperature sensor, "
+            "or another type of sensor?"
+        ),
+
+        "sensors": (
+            "Could you clarify which type of sensor you mean? "
+            "For example, a soil moisture sensor, temperature sensor, "
+            "or another type of sensor?"
+        ),
+
+        "ai": (
+            "Could you clarify what aspect of artificial intelligence "
+            "you would like to know about, such as its definition, "
+            "applications, or limitations?"
+        ),
+
+        "artificial intelligence": (
+            "Could you clarify what aspect of artificial intelligence "
+            "you would like to know about, such as its definition, "
+            "applications, or limitations?"
+        )
+    }
+
+    for topic, question in broad_topics.items():
+
+        if topic in clean_query:
+
+            # Do not trigger for already specific questions.
+            specific_question_words = [
+                "what",
+                "how",
+                "why",
+                "when",
+                "where",
+                "which",
+                "difference",
+                "application",
+                "applications",
+                "benefits",
+                "advantages",
+                "limitations",
+                "uses",
+                "used"
+            ]
+
+            has_specific_question = any(
+                word in words
+                for word in specific_question_words
+            )
+
+            if not has_specific_question:
+
+                return {
+                    "needs_clarification": True,
+                    "clarification_type": "ambiguous",
+                    "question": question
+                }
+
+    # ============================================================
+    # MULTI-PART QUERY DETECTION
+    # ============================================================
+
     question_words = [
         "what",
         "why",
@@ -77,7 +165,10 @@ def check_clarification(query):
             "question": ""
         }
 
-    # Normal query
+    # ============================================================
+    # NORMAL QUERY
+    # ============================================================
+
     return {
         "needs_clarification": False,
         "clarification_type": "clear",

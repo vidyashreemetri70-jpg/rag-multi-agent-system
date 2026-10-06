@@ -1,3 +1,4 @@
+
 from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from pathlib import Path
@@ -13,6 +14,19 @@ from app.document_processor import extract_text, clean_text
 from app.chunker import chunk_text
 from app.embeddings import create_embeddings
 from app.vector_store import add_documents
+
+from app.query_analytics import (
+    get_analytics,
+    get_analytics_summary,
+    detect_knowledge_gaps,
+    get_query_type_statistics,
+    get_domain_statistics,
+    get_common_queries,
+    get_low_confidence_queries,
+    get_retrieval_statistics,
+    get_daily_statistics,
+    get_analytics_report
+)
 
 
 app = FastAPI(title="AI Knowledge Retrieval Platform")
@@ -187,3 +201,125 @@ async def transcribe(file: UploadFile = File(...)):
     return {
         "text": text
     }
+
+
+
+
+# ===============================
+# M4.1 QUERY ANALYTICS
+# ===============================
+
+@app.get("/analytics")
+def analytics():
+
+    return {
+        "analytics": get_analytics()
+    }
+
+
+# ===============================
+# M4.1 ANALYTICS SUMMARY
+# ===============================
+
+@app.get("/analytics/summary")
+def analytics_summary():
+
+    return get_analytics_summary()
+
+
+# ===============================
+# M4.1 KNOWLEDGE GAPS
+# ===============================
+
+@app.get("/analytics/knowledge-gaps")
+def knowledge_gaps():
+
+    return {
+        "knowledge_gaps":
+            detect_knowledge_gaps()
+    }
+
+
+# ===============================
+# M4.1 QUERY TYPE STATISTICS
+# ===============================
+
+@app.get("/analytics/query-types")
+def query_type_statistics():
+
+    return {
+        "query_type_statistics":
+            get_query_type_statistics()
+    }
+
+
+# ===============================
+# M4.1 DOMAIN STATISTICS
+# ===============================
+
+@app.get("/analytics/domains")
+def domain_statistics():
+
+    return {
+        "domain_statistics":
+            get_domain_statistics()
+    }
+
+
+# ===============================
+# M4.1 COMMON QUERIES
+# ===============================
+
+@app.get("/analytics/common-queries")
+def common_queries():
+
+    return {
+        "common_queries":
+            get_common_queries()
+    }
+
+
+# ===============================
+# M4.1 LOW CONFIDENCE QUERIES
+# ===============================
+
+@app.get("/analytics/low-confidence")
+def low_confidence_queries():
+
+    return {
+        "low_confidence_queries":
+            get_low_confidence_queries()
+    }
+
+
+# ===============================
+# M4.1 RETRIEVAL STATISTICS
+# ===============================
+
+@app.get("/analytics/retrieval")
+def retrieval_statistics():
+
+    return get_retrieval_statistics()
+
+
+# ===============================
+# M4.1 DAILY STATISTICS
+# ===============================
+
+@app.get("/analytics/daily")
+def daily_statistics():
+
+    return {
+        "daily_statistics":
+            get_daily_statistics()
+    }
+
+
+# ===============================
+# M4.1 COMPLETE ANALYTICS REPORT
+# ===============================
+
+@app.get("/analytics/report")
+def analytics_report():
+
+    return get_analytics_report()

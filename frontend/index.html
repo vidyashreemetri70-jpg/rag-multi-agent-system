@@ -923,6 +923,277 @@
                 );
         }
 
+
+        /* =========================================================
+           M4.1 QUERY ANALYTICS
+           ========================================================= */
+
+        .analytics-card {
+            margin-top: 22px;
+        }
+
+        .analytics-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .analytics-header h2 {
+            margin-top: 7px;
+        }
+
+        .analytics-header p {
+            margin-top: 5px;
+            color: #777b91;
+            font-size: 12px;
+        }
+
+        .analytics-refresh {
+            border: 1px solid #7e2d64;
+            border-radius: 8px;
+            padding: 9px 14px;
+            background: #1b1222;
+            color: #ff70b7;
+            font-size: 10px;
+            font-weight: 700;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .analytics-refresh:hover {
+            background: #301735;
+            border-color: #ff2d95;
+            color: white;
+        }
+
+        .analytics-status {
+            margin-top: 15px;
+            color: #777e93;
+            font-size: 10px;
+        }
+
+        .analytics-stats {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .analytics-stat {
+            padding: 18px;
+            border: 1px solid #20283a;
+            border-radius: 13px;
+            background: #0a0f1c;
+        }
+
+        .analytics-stat-label {
+            color: #73798c;
+            font-size: 9px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .analytics-stat-value {
+            margin-top: 8px;
+            color: #f3f4f8;
+            font-size: 25px;
+            font-weight: 800;
+        }
+
+        .analytics-stat:nth-child(1)
+        .analytics-stat-value {
+            color: #ff4ca3;
+        }
+
+        .analytics-stat:nth-child(2)
+        .analytics-stat-value {
+            color: #70e7a0;
+        }
+
+        .analytics-stat:nth-child(3)
+        .analytics-stat-value {
+            color: #ff6b7a;
+        }
+
+        .analytics-stat:nth-child(4)
+        .analytics-stat-value {
+            color: #ffca70;
+        }
+
+        .analytics-stat:nth-child(5)
+        .analytics-stat-value {
+            color: #00c6ff;
+        }
+
+        .analytics-controls {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px;
+            margin-top: 25px;
+        }
+
+        .analytics-filter-label {
+            color: #777e93;
+            font-size: 10px;
+            margin-right: 5px;
+        }
+
+        .analytics-filter {
+            border: 1px solid #292f43;
+            border-radius: 7px;
+            padding: 8px 12px;
+            background: #0b101c;
+            color: #9da3b7;
+            font-size: 10px;
+            cursor: pointer;
+        }
+
+        .analytics-filter:hover {
+            border-color: #ff2d95;
+            color: white;
+        }
+
+        .analytics-filter.active {
+            border-color: #e32683;
+            background: #29152d;
+            color: #ff70b7;
+        }
+
+        .analytics-table-wrap {
+            margin-top: 18px;
+            overflow-x: auto;
+            border: 1px solid #1d2334;
+            border-radius: 12px;
+        }
+
+        .analytics-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 850px;
+        }
+
+        .analytics-table th {
+            padding: 12px 10px;
+            background: #0b101c;
+            color: #777e93;
+            font-size: 9px;
+            letter-spacing: 1px;
+            text-align: left;
+            border-bottom: 1px solid #20283a;
+        }
+
+        .analytics-table td {
+            padding: 12px 10px;
+            color: #cfd4e3;
+            font-size: 10px;
+            line-height: 1.5;
+            border-bottom: 1px solid #171d2b;
+            vertical-align: top;
+        }
+
+        .analytics-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .analytics-table tr:hover td {
+            background: rgba(255, 45, 149, 0.035);
+        }
+
+        .analytics-query {
+            max-width: 280px;
+            color: #f0f2f7;
+            word-break: break-word;
+        }
+
+        .analytics-type {
+            color: #c3c8d8;
+        }
+
+        .analytics-confidence {
+            font-weight: 700;
+        }
+
+        .analytics-answered {
+            color: #70e7a0;
+            font-weight: 700;
+        }
+
+        .analytics-unanswered {
+            color: #ff6b7a;
+            font-weight: 700;
+        }
+
+        .analytics-gap {
+            display: inline-block;
+            padding: 4px 7px;
+            border-radius: 5px;
+            background: rgba(255, 107, 122, 0.10);
+            border: 1px solid rgba(255, 107, 122, 0.18);
+            color: #ff6b7a;
+            font-size: 9px;
+            font-weight: 700;
+        }
+
+        .analytics-no-gap {
+            color: #70e7a0;
+            font-size: 9px;
+        }
+
+        .knowledge-gap-section {
+            margin-top: 25px;
+        }
+
+        .knowledge-gap-title {
+            color: #ffca70;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .knowledge-gap-description {
+            margin-top: 5px;
+            color: #777e93;
+            font-size: 10px;
+        }
+
+        .knowledge-gap-list {
+            display: grid;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .knowledge-gap-item {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            padding: 11px 13px;
+            border: 1px solid rgba(255, 193, 7, 0.15);
+            border-radius: 8px;
+            background: rgba(255, 193, 7, 0.045);
+        }
+
+        .knowledge-gap-query {
+            color: #dfe3ef;
+            font-size: 10px;
+            word-break: break-word;
+        }
+
+        .knowledge-gap-type {
+            color: #ffca70;
+            font-size: 9px;
+            white-space: nowrap;
+        }
+
+        .analytics-empty {
+            padding: 25px;
+            text-align: center;
+            color: #555d72;
+            font-size: 10px;
+        }
+
+
         .agents-section {
             margin-top: 45px;
         }
@@ -1001,6 +1272,14 @@
             color: #ff4ca3;
         }
 
+        @media (max-width: 1100px) {
+
+            .analytics-stats {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+        }
+
         @media (max-width: 900px) {
 
             .main-grid {
@@ -1014,6 +1293,11 @@
             .hero-symbol {
                 display: none;
             }
+
+            .analytics-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
         }
 
         @media (max-width: 600px) {
@@ -1044,6 +1328,271 @@
 
             .tts-controls button {
                 flex: 1;
+            }
+
+            .analytics-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .analytics-header {
+                flex-direction: column;
+            }
+
+            .analytics-refresh {
+                width: 100%;
+            }
+
+        }
+
+
+        /* =========================================================
+           M4.1 ANALYTICS INSIGHTS UI - FIXED
+           ========================================================= */
+
+        .analytics-insights {
+            width: 100% !important;
+            display: grid !important;
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            gap: 20px !important;
+            margin-top: 25px !important;
+        }
+
+        .analytics-insight-card {
+            position: relative !important;
+            width: 100% !important;
+            min-height: 220px !important;
+            padding: 24px !important;
+            box-sizing: border-box !important;
+            border-radius: 16px !important;
+            background: linear-gradient(145deg, rgba(18,23,42,.98), rgba(7,10,22,.98)) !important;
+            border: 1px solid rgba(255,45,149,.22) !important;
+            box-shadow: 0 12px 35px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.025) !important;
+            overflow: hidden !important;
+            transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease !important;
+        }
+
+        .analytics-insight-card::before {
+            content: "" !important;
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 3px !important;
+            background: linear-gradient(90deg,#ff2d95,#8b5cf6,#00c6ff) !important;
+        }
+
+        .analytics-insight-card::after {
+            content: "" !important;
+            position: absolute !important;
+            width: 150px !important;
+            height: 150px !important;
+            top: -80px !important;
+            right: -80px !important;
+            border-radius: 50% !important;
+            background: radial-gradient(circle,rgba(255,45,149,.12),transparent 70%) !important;
+            pointer-events: none !important;
+        }
+
+        .analytics-insight-card:hover {
+            transform: translateY(-4px) !important;
+            border-color: rgba(255,45,149,.5) !important;
+            box-shadow: 0 18px 40px rgba(0,0,0,.45), 0 0 30px rgba(255,45,149,.08) !important;
+        }
+
+        .insight-title-row {
+            position: relative !important;
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: flex-start !important;
+            gap: 15px !important;
+            z-index: 2 !important;
+        }
+
+        .insight-label {
+            display: block !important;
+            margin-bottom: 6px !important;
+            color: #ff4ca3 !important;
+            font-size: 9px !important;
+            font-weight: 800 !important;
+            letter-spacing: 2px !important;
+        }
+
+        .analytics-insight-card h3 {
+            margin: 0 !important;
+            color: #fff !important;
+            font-size: 14px !important;
+            font-weight: 800 !important;
+            letter-spacing: .8px !important;
+            line-height: 1.35 !important;
+        }
+
+        .analytics-insight-card p {
+            margin: 7px 0 18px !important;
+            color: #78839d !important;
+            font-size: 10px !important;
+            line-height: 1.5 !important;
+        }
+
+        .insight-symbol {
+            width: 38px !important;
+            height: 38px !important;
+            min-width: 38px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            border-radius: 10px !important;
+            color: #fff !important;
+            font-size: 17px !important;
+            background: linear-gradient(135deg,rgba(255,45,149,.18),rgba(139,92,246,.16),rgba(0,198,255,.12)) !important;
+            border: 1px solid rgba(255,45,149,.22) !important;
+        }
+
+        .analytics-list {
+            position: relative !important;
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 9px !important;
+            width: 100% !important;
+            z-index: 2 !important;
+        }
+
+        .analytics-list-item {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            gap: 12px !important;
+            min-height: 42px !important;
+            padding: 10px 13px !important;
+            box-sizing: border-box !important;
+            border-radius: 9px !important;
+            background: rgba(255,255,255,.035) !important;
+            border: 1px solid rgba(255,255,255,.07) !important;
+            transition: .2s ease !important;
+        }
+
+        .analytics-list-item:hover {
+            background: rgba(255,45,149,.07) !important;
+            border-color: rgba(255,45,149,.25) !important;
+            transform: translateX(3px) !important;
+        }
+
+        .analytics-list-item span {
+            color: #dce2f2 !important;
+            font-size: 11px !important;
+        }
+
+        .analytics-list-item strong {
+            min-width: 28px !important;
+            padding: 5px 9px !important;
+            border-radius: 6px !important;
+            color: #fff !important;
+            font-size: 10px !important;
+            font-weight: 800 !important;
+            text-align: center !important;
+            background: linear-gradient(135deg,#ff2d95,#8b5cf6) !important;
+        }
+
+        .analytics-metrics,
+        .analytics-metric-grid {
+            position: relative !important;
+            display: grid !important;
+            grid-template-columns: repeat(2,minmax(0,1fr)) !important;
+            gap: 10px !important;
+            width: 100% !important;
+            z-index: 2 !important;
+        }
+
+        .analytics-metric {
+            min-height: 78px !important;
+            padding: 13px !important;
+            box-sizing: border-box !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+            border-radius: 10px !important;
+            background: linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.018)) !important;
+            border: 1px solid rgba(255,255,255,.07) !important;
+            transition: .2s ease !important;
+        }
+
+        .analytics-metric:hover {
+            background: linear-gradient(145deg,rgba(255,45,149,.08),rgba(139,92,246,.05)) !important;
+            border-color: rgba(255,45,149,.25) !important;
+            transform: translateY(-2px) !important;
+        }
+
+        .analytics-metric-label,
+        .analytics-metric span {
+            margin-bottom: 8px !important;
+            color: #78839d !important;
+            font-size: 8px !important;
+            font-weight: 800 !important;
+            letter-spacing: .9px !important;
+            text-transform: uppercase !important;
+        }
+
+        .analytics-metric-value,
+        .analytics-metric strong {
+            color: #fff !important;
+            font-size: 21px !important;
+            font-weight: 800 !important;
+            line-height: 1.1 !important;
+        }
+
+        .analytics-daily-item {
+            padding: 12px !important;
+            border-radius: 10px !important;
+            background: rgba(255,255,255,.035) !important;
+            border: 1px solid rgba(255,255,255,.07) !important;
+        }
+
+        .analytics-daily-date {
+            margin-bottom: 8px !important;
+            color: #ff4ca3 !important;
+            font-size: 10px !important;
+            font-weight: 800 !important;
+        }
+
+        .analytics-daily-stats {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            gap: 7px !important;
+        }
+
+        .analytics-daily-stats span {
+            padding: 5px 8px !important;
+            border-radius: 5px !important;
+            background: rgba(255,255,255,.045) !important;
+            color: #8b96ad !important;
+            font-size: 9px !important;
+        }
+
+        .analytics-daily-stats strong {
+            color: #fff !important;
+        }
+
+        .analytics-empty {
+            width: 100% !important;
+            padding: 15px !important;
+            box-sizing: border-box !important;
+            text-align: center !important;
+            color: #68738e !important;
+            font-size: 10px !important;
+            background: rgba(255,255,255,.018) !important;
+            border: 1px dashed rgba(255,255,255,.10) !important;
+            border-radius: 9px !important;
+        }
+
+        @media (max-width: 850px) {
+            .analytics-insights {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .analytics-metrics,
+            .analytics-metric-grid {
+                grid-template-columns: 1fr !important;
             }
         }
 
@@ -1458,6 +2007,426 @@
 
     </section>
 
+
+    <!-- =========================================================
+         M4.1 QUERY ANALYTICS
+         ========================================================= -->
+
+    <section class="card analytics-card">
+
+        <div class="analytics-header">
+
+            <div>
+
+                <span class="card-number">
+                    MODULE 04 / M4.1
+                </span>
+
+                <h2>
+                    Query Analytics
+                </h2>
+
+                <p>
+                    Monitor query patterns, response quality and knowledge gaps
+                </p>
+
+            </div>
+
+            <button
+                id="refreshAnalyticsButton"
+                class="analytics-refresh"
+                type="button"
+            >
+                ↻ REFRESH ANALYTICS
+            </button>
+
+        </div>
+
+        <div
+            id="analyticsStatus"
+            class="analytics-status"
+        >
+            Loading analytics...
+        </div>
+
+
+        <div class="analytics-stats">
+
+            <div class="analytics-stat">
+
+                <div class="analytics-stat-label">
+                    Total Queries
+                </div>
+
+                <div
+                    id="totalQueries"
+                    class="analytics-stat-value"
+                >
+                    0
+                </div>
+
+            </div>
+
+
+            <div class="analytics-stat">
+
+                <div class="analytics-stat-label">
+                    Answered
+                </div>
+
+                <div
+                    id="answeredQueries"
+                    class="analytics-stat-value"
+                >
+                    0
+                </div>
+
+            </div>
+
+
+            <div class="analytics-stat">
+
+                <div class="analytics-stat-label">
+                    Unanswered
+                </div>
+
+                <div
+                    id="unansweredQueries"
+                    class="analytics-stat-value"
+                >
+                    0
+                </div>
+
+            </div>
+
+
+            <div class="analytics-stat">
+
+                <div class="analytics-stat-label">
+                    Clarifications
+                </div>
+
+                <div
+                    id="clarificationQueries"
+                    class="analytics-stat-value"
+                >
+                    0
+                </div>
+
+            </div>
+
+
+            <div class="analytics-stat">
+
+                <div class="analytics-stat-label">
+                    Knowledge Gaps
+                </div>
+
+                <div
+                    id="knowledgeGapCount"
+                    class="analytics-stat-value"
+                >
+                    0
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="analytics-controls">
+
+            <span class="analytics-filter-label">
+                FILTER:
+            </span>
+
+            <button
+                type="button"
+                class="analytics-filter active"
+                data-filter="all"
+            >
+                ALL
+            </button>
+
+            <button
+                type="button"
+                class="analytics-filter"
+                data-filter="answered"
+            >
+                ANSWERED
+            </button>
+
+            <button
+                type="button"
+                class="analytics-filter"
+                data-filter="unanswered"
+            >
+                UNANSWERED
+            </button>
+
+            <button
+                type="button"
+                class="analytics-filter"
+                data-filter="gap"
+            >
+                KNOWLEDGE GAPS
+            </button>
+
+            <button
+                type="button"
+                class="analytics-filter"
+                data-filter="factual"
+            >
+                FACTUAL
+            </button>
+
+            <button
+                type="button"
+                class="analytics-filter"
+                data-filter="procedural"
+            >
+                PROCEDURAL
+            </button>
+
+            <button
+                type="button"
+                class="analytics-filter"
+                data-filter="ambiguous"
+            >
+                AMBIGUOUS
+            </button>
+
+        </div>
+
+
+        <div class="analytics-table-wrap">
+
+            <table class="analytics-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            TIME
+                        </th>
+
+                        <th>
+                            QUERY
+                        </th>
+
+                        <th>
+                            TYPE
+                        </th>
+
+                        <th>
+                            CONFIDENCE
+                        </th>
+
+                        <th>
+                            STATUS
+                        </th>
+
+                        <th>
+                            KNOWLEDGE GAP
+                        </th>
+
+                        <th>
+                            DOCUMENTS
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody
+                    id="analyticsTableBody"
+                >
+
+                    <tr>
+
+                        <td colspan="7">
+
+                            <div class="analytics-empty">
+                                Loading query history...
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+        <!-- =========================================================
+     M4.1 ANALYTICS INSIGHTS
+     ========================================================= -->
+<div class="analytics-insights">
+
+    <!-- QUERY TYPE DISTRIBUTION -->
+    <div class="analytics-insight-card">
+        <div class="insight-title-row">
+            <div>
+                <span class="insight-label">ANALYTICS 01</span>
+                <h3>QUERY TYPE DISTRIBUTION</h3>
+                <p>Classification of user queries</p>
+            </div>
+            <div class="insight-symbol">◈</div>
+        </div>
+
+        <div id="queryTypeAnalytics" class="analytics-list"></div>
+    </div>
+
+
+    <!-- KNOWLEDGE DOMAIN DISTRIBUTION -->
+    <div class="analytics-insight-card">
+        <div class="insight-title-row">
+            <div>
+                <span class="insight-label">ANALYTICS 02</span>
+                <h3>KNOWLEDGE DOMAIN DISTRIBUTION</h3>
+                <p>Domains represented in user queries</p>
+            </div>
+            <div class="insight-symbol">◎</div>
+        </div>
+
+        <div id="domainAnalytics" class="analytics-list"></div>
+    </div>
+
+
+    <!-- RETRIEVAL PERFORMANCE -->
+    <div class="analytics-insight-card">
+        <div class="insight-title-row">
+            <div>
+                <span class="insight-label">ANALYTICS 03</span>
+                <h3>RETRIEVAL PERFORMANCE</h3>
+                <p>Vector retrieval statistics</p>
+            </div>
+            <div class="insight-symbol">⌁</div>
+        </div>
+
+        <div class="analytics-metrics">
+
+            <div class="analytics-metric">
+                <span>RETRIEVED DOCUMENTS</span>
+                <strong id="retrievedDocumentsMetric">0</strong>
+            </div>
+
+            <div class="analytics-metric">
+                <span>AVERAGE DISTANCE</span>
+                <strong id="averageDistanceMetric">0</strong>
+            </div>
+
+            <div class="analytics-metric">
+                <span>BEST DISTANCE</span>
+                <strong id="bestDistanceMetric">N/A</strong>
+            </div>
+
+            <div class="analytics-metric">
+                <span>WORST DISTANCE</span>
+                <strong id="worstDistanceMetric">N/A</strong>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- SYSTEM PERFORMANCE -->
+    <div class="analytics-insight-card">
+        <div class="insight-title-row">
+            <div>
+                <span class="insight-label">ANALYTICS 04</span>
+                <h3>SYSTEM PERFORMANCE</h3>
+                <p>Overall response analytics</p>
+            </div>
+            <div class="insight-symbol">⚡</div>
+        </div>
+
+        <div class="analytics-metrics">
+
+            <div class="analytics-metric">
+                <span>ANSWER RATE</span>
+                <strong id="answerRateMetric">0%</strong>
+            </div>
+
+            <div class="analytics-metric">
+                <span>AVG CONFIDENCE</span>
+                <strong id="averageConfidenceMetric">0</strong>
+            </div>
+
+            <div class="analytics-metric">
+                <span>AVG RESPONSE TIME</span>
+                <strong id="averageResponseTimeMetric">0 s</strong>
+            </div>
+
+            <div class="analytics-metric">
+                <span>LOW CONFIDENCE</span>
+                <strong id="lowConfidenceMetric">0</strong>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- DAILY QUERY ACTIVITY -->
+    <div class="analytics-insight-card">
+        <div class="insight-title-row">
+            <div>
+                <span class="insight-label">ANALYTICS 05</span>
+                <h3>DAILY QUERY ACTIVITY</h3>
+                <p>Query activity grouped by date</p>
+            </div>
+            <div class="insight-symbol">▤</div>
+        </div>
+
+        <div id="dailyAnalytics" class="analytics-list"></div>
+    </div>
+
+
+    <!-- COMMON USER QUERIES -->
+    <div class="analytics-insight-card">
+        <div class="insight-title-row">
+            <div>
+                <span class="insight-label">ANALYTICS 06</span>
+                <h3>COMMON USER QUERIES</h3>
+                <p>Frequently repeated questions</p>
+            </div>
+            <div class="insight-symbol">⌕</div>
+        </div>
+
+        <div id="commonQueriesAnalytics" class="analytics-list"></div>
+    </div>
+
+</div>
+
+
+        <div class="knowledge-gap-section">
+
+            <div class="knowledge-gap-title">
+                ⚠ KNOWLEDGE GAP DETECTION
+            </div>
+
+            <p class="knowledge-gap-description">
+                Repeated unanswered queries indicate information that may be missing from the knowledge base.
+            </p>
+
+            <div
+                id="knowledgeGapList"
+                class="knowledge-gap-list"
+            >
+
+                <div class="analytics-empty">
+                    Loading knowledge gaps...
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
     <section class="agents-section">
 
         <div class="section-heading">
@@ -1600,6 +2569,62 @@ const voiceSelect =
 
 
 /* =========================================================
+   M4.1 ANALYTICS ELEMENTS
+   ========================================================= */
+
+const refreshAnalyticsButton =
+    document.getElementById(
+        "refreshAnalyticsButton"
+    );
+
+const analyticsStatus =
+    document.getElementById(
+        "analyticsStatus"
+    );
+
+const totalQueries =
+    document.getElementById(
+        "totalQueries"
+    );
+
+const answeredQueries =
+    document.getElementById(
+        "answeredQueries"
+    );
+
+const unansweredQueries =
+    document.getElementById(
+        "unansweredQueries"
+    );
+
+const clarificationQueries =
+    document.getElementById(
+        "clarificationQueries"
+    );
+
+const knowledgeGapCount =
+    document.getElementById(
+        "knowledgeGapCount"
+    );
+
+const analyticsTableBody =
+    document.getElementById(
+        "analyticsTableBody"
+    );
+
+const knowledgeGapList =
+    document.getElementById(
+        "knowledgeGapList"
+    );
+
+
+let analyticsRecords = [];
+
+let currentAnalyticsFilter =
+    "all";
+
+
+/* =========================================================
    TTS VARIABLES
    ========================================================= */
 
@@ -1684,6 +2709,12 @@ async function uploadFile() {
 
         uploadStatus.style.color =
             "#70e7a0";
+
+
+        /* M4.1:
+           Refresh analytics after new activity. */
+
+        loadAnalytics();
 
     } catch (error) {
 
@@ -1895,74 +2926,55 @@ async function askQuestion() {
         }
 
 
+       
         /* =================================================
-           EVIDENCE CONFIDENCE
-           ================================================= */
+   EVIDENCE CONFIDENCE
+   ================================================= */
 
-        let evidenceConfidence =
-            "No evidence";
+const retrievalConfidence =
+    Number(
+        data.retrieval_confidence
+    );
 
-        let evidenceConfidenceClass =
+let evidenceConfidence =
+    "No evidence";
+
+let evidenceConfidenceClass =
+    "confidence-box confidence-low";
+
+if (
+    !isNaN(retrievalConfidence)
+) {
+
+    if (
+        retrievalConfidence >= 0.80
+    ) {
+
+        evidenceConfidence =
+            "High confidence";
+
+        evidenceConfidenceClass =
+            "confidence-box";
+
+    } else if (
+        retrievalConfidence >= 0.50
+    ) {
+
+        evidenceConfidence =
+            "Medium confidence";
+
+        evidenceConfidenceClass =
+            "confidence-box confidence-medium";
+
+    } else {
+
+        evidenceConfidence =
+            "Low confidence";
+
+        evidenceConfidenceClass =
             "confidence-box confidence-low";
-
-        if (
-            data.evidence &&
-            data.evidence.length > 0
-        ) {
-
-            const distances =
-                data.evidence
-                    .map(
-                        item =>
-                            Number(
-                                item.distance
-                            )
-                    )
-                    .filter(
-                        value =>
-                            !isNaN(value)
-                    );
-
-            if (
-                distances.length > 0
-            ) {
-
-                const bestDistance =
-                    Math.min(
-                        ...distances
-                    );
-
-                if (
-                    bestDistance <= 0.8
-                ) {
-
-                    evidenceConfidence =
-                        "High evidence relevance";
-
-                    evidenceConfidenceClass =
-                        "confidence-box";
-
-                } else if (
-                    bestDistance <= 1.2
-                ) {
-
-                    evidenceConfidence =
-                        "Medium evidence relevance";
-
-                    evidenceConfidenceClass =
-                        "confidence-box confidence-medium";
-
-                } else {
-
-                    evidenceConfidence =
-                        "Low evidence relevance";
-
-                    evidenceConfidenceClass =
-                        "confidence-box confidence-low";
-                }
-            }
-        }
-
+    }
+}
 
         /* =================================================
            BUILD SOURCE EVIDENCE
@@ -2011,17 +3023,6 @@ async function askQuestion() {
 
                                     : "N/A";
 
-
-                            /*
-                             * CITATION ID
-                             *
-                             * First use the citation_id
-                             * received from backend.
-                             *
-                             * If backend does not provide it,
-                             * create a citation reference
-                             * using document name + chunk ID.
-                             */
 
                             const citationId =
                                 item.citation_id &&
@@ -2205,33 +3206,43 @@ async function askQuestion() {
 
                 <small>
 
-                    Query Type:
-                    ${escapeHTML(
-                        data.query_type ||
-                        "N/A"
-                    )}
+    Query Type:
+    ${escapeHTML(
+        data.query_type ||
+        "N/A"
+    )}
 
-                    <br>
+    <br>
 
-                    Intent Confidence:
-                    ${
-                        isNaN(
-                            intentConfidence
-                        )
-                        ? "N/A"
-                        : intentConfidence.toFixed(2)
-                    }
+    Intent Confidence:
+    ${
+        isNaN(
+            intentConfidence
+        )
+        ? "N/A"
+        : intentConfidence.toFixed(2)
+    }
 
-                </small>
+    <br>
 
+    Retrieval Confidence:
+    ${
+        isNaN(
+            retrievalConfidence
+        )
+        ? "N/A"
+        : retrievalConfidence.toFixed(2)
+    }
 
-                <div
-                    class="${confidenceClass}"
-                >
+</small>
 
-                    ● ${confidenceText}
+<div
+    class="${evidenceConfidenceClass}"
+>
 
-                </div>
+    ● ${evidenceConfidence}
+
+</div>
 
 
                 <div
@@ -2250,12 +3261,19 @@ async function askQuestion() {
         `;
 
 
-        /* =================================================
-           SPEAK ANSWER
-           ================================================= */
-
         speakText(
             data.answer || ""
+        );
+
+
+        /* =================================================
+           M4.1:
+           Refresh analytics after a query.
+           ================================================= */
+
+        setTimeout(
+            loadAnalytics,
+            500
         );
 
 
@@ -2293,6 +3311,863 @@ async function askQuestion() {
         askButton.innerText =
             "RUN AI QUERY →";
     }
+}
+
+
+
+/* =========================================================
+   M4.1 ANALYTICS INSIGHT CARDS
+   ========================================================= */
+
+function renderInsightList(elementId, data) {
+    const element = document.getElementById(elementId);
+    if (!element) return;
+
+    const entries = Object.entries(data || {});
+
+    if (!entries.length) {
+        element.innerHTML = `<div class="analytics-empty">No data available.</div>`;
+        return;
+    }
+
+    element.innerHTML = entries.map(([label, value]) => `
+        <div class="analytics-list-item">
+            <span>${escapeHTML(label)}</span>
+            <strong>${escapeHTML(String(value))}</strong>
+        </div>
+    `).join("");
+}
+
+function renderDailyInsight(data) {
+    const element = document.getElementById("dailyAnalytics");
+    if (!element) return;
+
+    const entries = Object.entries(data || {}).sort((a, b) => b[0].localeCompare(a[0]));
+
+    if (!entries.length) {
+        element.innerHTML = `<div class="analytics-empty">No daily activity available.</div>`;
+        return;
+    }
+
+    element.innerHTML = entries.map(([date, stats]) => `
+        <div class="analytics-daily-item">
+            <div class="analytics-daily-date">${escapeHTML(date)}</div>
+            <div class="analytics-daily-stats">
+                <span>Queries <strong>${stats.total_queries ?? 0}</strong></span>
+                <span>Answered <strong>${stats.answered_queries ?? 0}</strong></span>
+                <span>Unanswered <strong>${stats.unanswered_queries ?? 0}</strong></span>
+                <span>Gaps <strong>${stats.knowledge_gaps ?? 0}</strong></span>
+            </div>
+        </div>
+    `).join("");
+}
+
+function renderCommonQueries(data) {
+    const element = document.getElementById("commonQueriesAnalytics");
+    if (!element) return;
+
+    const queries = Array.isArray(data) ? data : [];
+
+    if (!queries.length) {
+        element.innerHTML = `<div class="analytics-empty">No repeated queries available.</div>`;
+        return;
+    }
+
+    element.innerHTML = queries.slice(0, 8).map(item => `
+        <div class="analytics-list-item">
+            <span>${escapeHTML(item.query || "Unknown query")}</span>
+            <strong>${item.count ?? 0}</strong>
+        </div>
+    `).join("");
+}
+
+function renderRetrievalInsight(data) {
+    const retrieved = document.getElementById("retrievedDocumentsMetric");
+    const average = document.getElementById("averageDistanceMetric");
+    const best = document.getElementById("bestDistanceMetric");
+    const worst = document.getElementById("worstDistanceMetric");
+
+    if (!retrieved) return;
+
+    retrieved.innerText = data?.total_retrieved_documents ?? 0;
+    average.innerText = Number(data?.average_retrieval_distance ?? 0).toFixed(4);
+    best.innerText = data?.best_retrieval_distance == null ? "N/A" : Number(data.best_retrieval_distance).toFixed(4);
+    worst.innerText = data?.worst_retrieval_distance == null ? "N/A" : Number(data.worst_retrieval_distance).toFixed(4);
+}
+
+function renderSystemInsight(summary, lowConfidenceData) {
+    const answerRate = document.getElementById("answerRateMetric");
+    const confidence = document.getElementById("averageConfidenceMetric");
+    const responseTime = document.getElementById("averageResponseTimeMetric");
+    const lowConfidence = document.getElementById("lowConfidenceMetric");
+
+    if (!answerRate) return;
+
+    answerRate.innerText = `${Number(summary?.answer_rate ?? 0).toFixed(2)}%`;
+    confidence.innerText = Number(summary?.average_confidence ?? 0).toFixed(2);
+    responseTime.innerText = `${Number(summary?.average_response_time ?? 0).toFixed(2)} s`;
+    lowConfidence.innerText = Array.isArray(lowConfidenceData) ? lowConfidenceData.length : 0;
+}
+
+async function loadAnalyticsInsights(summaryData) {
+    try {
+        const [queryTypesResponse, domainsResponse, retrievalResponse, dailyResponse, commonResponse, lowConfidenceResponse] = await Promise.all([
+            fetch(`${API_URL}/analytics/query-types`),
+            fetch(`${API_URL}/analytics/domains`),
+            fetch(`${API_URL}/analytics/retrieval`),
+            fetch(`${API_URL}/analytics/daily`),
+            fetch(`${API_URL}/analytics/common-queries`),
+            fetch(`${API_URL}/analytics/low-confidence`)
+        ]);
+
+        if (!queryTypesResponse.ok || !domainsResponse.ok || !retrievalResponse.ok || !dailyResponse.ok || !commonResponse.ok || !lowConfidenceResponse.ok) {
+            throw new Error("Analytics insight endpoint failed");
+        }
+
+        const queryTypes = await queryTypesResponse.json();
+        const domains = await domainsResponse.json();
+        const retrieval = await retrievalResponse.json();
+        const daily = await dailyResponse.json();
+        const common = await commonResponse.json();
+        const lowConfidence = await lowConfidenceResponse.json();
+
+        renderInsightList("queryTypeAnalytics", queryTypes.query_type_statistics || {});
+        renderInsightList("domainAnalytics", domains.domain_statistics || {});
+        renderRetrievalInsight(retrieval);
+        renderSystemInsight(summaryData, lowConfidence.low_confidence_queries || []);
+        renderDailyInsight(daily.daily_statistics || {});
+        renderCommonQueries(common.common_queries || []);
+    } catch (error) {
+        console.error("Analytics insight error:", error);
+    }
+}
+
+/* =========================================================
+   M4.1 ANALYTICS
+   ========================================================= */
+
+async function loadAnalytics() {
+
+    analyticsStatus.innerText =
+        "Loading analytics...";
+
+    try {
+
+        const [
+            analyticsResponse,
+            summaryResponse,
+            gapsResponse
+        ] =
+            await Promise.all([
+
+                fetch(
+                    `${API_URL}/analytics`
+                ),
+
+                fetch(
+                    `${API_URL}/analytics/summary`
+                ),
+
+                fetch(
+                    `${API_URL}/analytics/knowledge-gaps`
+                )
+
+            ]);
+
+
+        if (
+            !analyticsResponse.ok ||
+            !summaryResponse.ok ||
+            !gapsResponse.ok
+        ) {
+
+            throw new Error(
+                "Analytics endpoint failed"
+            );
+        }
+
+
+        const analyticsData =
+            await analyticsResponse.json();
+
+        const summaryData =
+            await summaryResponse.json();
+
+        const gapsData =
+            await gapsResponse.json();
+
+
+        /*
+         * Backend may return either:
+         * an array directly
+         * or an object containing records.
+         */
+
+        if (
+            Array.isArray(
+                analyticsData
+            )
+        ) {
+
+            analyticsRecords =
+                analyticsData;
+
+        } else {
+
+            analyticsRecords =
+                analyticsData.records ||
+                analyticsData.analytics ||
+                analyticsData.data ||
+                [];
+
+        }
+
+
+        /*
+         * Summary values
+         */
+
+        totalQueries.innerText =
+            summaryData.total_queries ??
+            0;
+
+        answeredQueries.innerText =
+            summaryData.answered_queries ??
+            0;
+
+        unansweredQueries.innerText =
+            summaryData.unanswered_queries ??
+            0;
+
+        clarificationQueries.innerText =
+            summaryData.clarification_queries ??
+            0;
+
+        knowledgeGapCount.innerText =
+            summaryData.knowledge_gaps ??
+            0;
+
+
+        renderAnalyticsTable();
+
+        renderKnowledgeGaps(
+            gapsData
+        );
+
+        await loadAnalyticsInsights(
+            summaryData
+        );
+
+
+        analyticsStatus.innerText =
+            `✓ Analytics updated — ${analyticsRecords.length} query records loaded.`;
+
+
+    } catch (error) {
+
+        console.error(
+            "Analytics error:",
+            error
+        );
+
+        analyticsStatus.innerText =
+            "❌ Unable to load analytics. Make sure FastAPI is running.";
+
+        analyticsTableBody.innerHTML = `
+
+            <tr>
+
+                <td colspan="7">
+
+                    <div class="analytics-empty">
+
+                        Analytics data could not be loaded.
+
+                    </div>
+
+                </td>
+
+            </tr>
+
+        `;
+
+        knowledgeGapList.innerHTML = `
+
+            <div class="analytics-empty">
+
+                Knowledge-gap data could not be loaded.
+
+            </div>
+
+        `;
+    }
+}
+
+
+/* =========================================================
+   M4.1 FILTER
+   ========================================================= */
+
+document
+    .querySelectorAll(
+        ".analytics-filter"
+    )
+    .forEach(
+        function(button) {
+
+            button.addEventListener(
+                "click",
+                function() {
+
+                    document
+                        .querySelectorAll(
+                            ".analytics-filter"
+                        )
+                        .forEach(
+                            item =>
+                                item.classList.remove(
+                                    "active"
+                                )
+                        );
+
+                    this.classList.add(
+                        "active"
+                    );
+
+                    currentAnalyticsFilter =
+                        this.dataset.filter;
+
+                    renderAnalyticsTable();
+
+                }
+            );
+
+        }
+    );
+
+
+/* =========================================================
+   M4.1 REFRESH BUTTON
+   ========================================================= */
+
+refreshAnalyticsButton.addEventListener(
+    "click",
+    loadAnalytics
+);
+
+
+/* =========================================================
+   M4.1 FILTER LOGIC
+   ========================================================= */
+
+function filterAnalyticsRecords() {
+
+    if (
+        currentAnalyticsFilter ===
+        "all"
+    ) {
+
+        return analyticsRecords;
+    }
+
+
+    return analyticsRecords.filter(
+        function(record) {
+
+            const answered =
+                Boolean(
+                    record.answered
+                );
+
+            const gap =
+                Boolean(
+                    record.knowledge_gap
+                );
+
+            const queryType =
+                String(
+                    record.query_type ||
+                    ""
+                )
+                .toLowerCase();
+
+
+            if (
+                currentAnalyticsFilter ===
+                "answered"
+            ) {
+
+                return answered;
+            }
+
+
+            if (
+                currentAnalyticsFilter ===
+                "unanswered"
+            ) {
+
+                return !answered;
+            }
+
+
+            if (
+                currentAnalyticsFilter ===
+                "gap"
+            ) {
+
+                return gap;
+            }
+
+
+            if (
+                currentAnalyticsFilter ===
+                "factual"
+            ) {
+
+                return queryType
+                    .includes(
+                        "factual"
+                    );
+            }
+
+
+            if (
+                currentAnalyticsFilter ===
+                "procedural"
+            ) {
+
+                return queryType
+                    .includes(
+                        "procedural"
+                    );
+            }
+
+
+            if (
+                currentAnalyticsFilter ===
+                "ambiguous"
+            ) {
+
+                return queryType
+                    .includes(
+                        "ambiguous"
+                    );
+            }
+
+
+            return true;
+        }
+    );
+}
+
+
+/* =========================================================
+   M4.1 ANALYTICS TABLE
+   ========================================================= */
+
+function renderAnalyticsTable() {
+
+    const records =
+        filterAnalyticsRecords();
+
+
+    if (
+        !records.length
+    ) {
+
+        analyticsTableBody.innerHTML = `
+
+            <tr>
+
+                <td colspan="7">
+
+                    <div class="analytics-empty">
+
+                        No analytics records found
+                        for this filter.
+
+                    </div>
+
+                </td>
+
+            </tr>
+
+        `;
+
+        return;
+    }
+
+
+    /*
+     * Show newest records first.
+     */
+
+    const sortedRecords =
+        [...records].reverse();
+
+
+    analyticsTableBody.innerHTML =
+        sortedRecords
+            .map(
+                function(record) {
+
+                    const timestamp =
+                        formatAnalyticsTime(
+                            record.timestamp
+                        );
+
+
+                    const query =
+                        record.query ||
+                        "N/A";
+
+
+                    const queryType =
+                        record.query_type ||
+                        "N/A";
+
+
+                    const confidence =
+                        Number(
+                            record.confidence
+                        );
+
+
+                    const confidenceText =
+                        isNaN(
+                            confidence
+                        )
+
+                            ? "N/A"
+
+                            : confidence.toFixed(
+                                2
+                            );
+
+
+                    const answered =
+                        Boolean(
+                            record.answered
+                        );
+
+
+                    const knowledgeGap =
+                        Boolean(
+                            record.knowledge_gap
+                        );
+
+
+                    const documents =
+                        Array.isArray(
+                            record.retrieved_documents
+                        )
+
+                            ? record
+                                .retrieved_documents
+                                .length
+
+                            : 0;
+
+
+                    return `
+
+                        <tr>
+
+                            <td>
+                                ${escapeHTML(
+                                    timestamp
+                                )}
+                            </td>
+
+
+                            <td>
+
+                                <div
+                                    class="analytics-query"
+                                >
+
+                                    ${escapeHTML(
+                                        query
+                                    )}
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+
+                                <span
+                                    class="analytics-type"
+                                >
+
+                                    ${escapeHTML(
+                                        queryType
+                                    )}
+
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <span
+                                    class="analytics-confidence"
+                                >
+
+                                    ${confidenceText}
+
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                ${
+                                    answered
+
+                                    ? `<span class="analytics-answered">
+                                            ✓ Answered
+                                       </span>`
+
+                                    : `<span class="analytics-unanswered">
+                                            ✕ Unanswered
+                                       </span>`
+                                }
+
+                            </td>
+
+
+                            <td>
+
+                                ${
+                                    knowledgeGap
+
+                                    ? `<span class="analytics-gap">
+                                            GAP DETECTED
+                                       </span>`
+
+                                    : `<span class="analytics-no-gap">
+                                            ✓ No gap
+                                       </span>`
+                                }
+
+                            </td>
+
+
+                            <td>
+
+                                ${documents}
+
+                            </td>
+
+                        </tr>
+
+                    `;
+
+                }
+            )
+            .join("");
+}
+
+
+/* =========================================================
+   M4.1 KNOWLEDGE GAPS
+   ========================================================= */
+
+function renderKnowledgeGaps(
+    gapsData
+) {
+
+    let gaps = [];
+
+
+    if (
+        Array.isArray(
+            gapsData
+        )
+    ) {
+
+        gaps =
+            gapsData;
+
+    } else {
+
+        gaps =
+            gapsData.gaps ||
+            gapsData.knowledge_gaps ||
+            gapsData.data ||
+            [];
+
+    }
+
+
+    if (
+        !gaps.length
+    ) {
+
+        knowledgeGapList.innerHTML = `
+
+            <div class="analytics-empty">
+
+                ✓ No knowledge gaps detected.
+
+            </div>
+
+        `;
+
+        return;
+    }
+
+
+    /*
+     * Count repeated questions.
+     */
+
+    const gapMap =
+        new Map();
+
+
+    gaps.forEach(
+        function(gap) {
+
+            const query =
+                String(
+                    gap.query ||
+                    "Unknown query"
+                );
+
+
+            if (
+                gapMap.has(
+                    query
+                )
+            ) {
+
+                const current =
+                    gapMap.get(
+                        query
+                    );
+
+                current.count++;
+
+            } else {
+
+                gapMap.set(
+                    query,
+                    {
+                        query: query,
+                        queryType:
+                            gap.query_type ||
+                            "N/A",
+                        count: 1
+                    }
+                );
+            }
+
+        }
+    );
+
+
+    const groupedGaps =
+        Array.from(
+            gapMap.values()
+        )
+        .sort(
+            function(a, b) {
+
+                return b.count -
+                    a.count;
+
+            }
+        );
+
+
+    knowledgeGapList.innerHTML =
+        groupedGaps
+            .map(
+                function(item) {
+
+                    return `
+
+                        <div
+                            class="knowledge-gap-item"
+                        >
+
+                            <div
+                                class="knowledge-gap-query"
+                            >
+
+                                ${escapeHTML(
+                                    item.query
+                                )}
+
+                            </div>
+
+                            <div
+                                class="knowledge-gap-type"
+                            >
+
+                                ${escapeHTML(
+                                    item.queryType
+                                )}
+
+                                ·
+
+                                ${item.count}
+                                occurrence${
+                                    item.count === 1
+                                        ? ""
+                                        : "s"
+                                }
+
+                            </div>
+
+                        </div>
+
+                    `;
+
+                }
+            )
+            .join("");
+}
+
+
+/* =========================================================
+   M4.1 TIME FORMAT
+   ========================================================= */
+
+function formatAnalyticsTime(
+    timestamp
+) {
+
+    if (!timestamp) {
+
+        return "N/A";
+    }
+
+
+    const date =
+        new Date(
+            timestamp
+        );
+
+
+    if (
+        isNaN(
+            date.getTime()
+        )
+    ) {
+
+        return String(
+            timestamp
+        );
+    }
+
+
+    return date.toLocaleString();
 }
 
 
@@ -2864,6 +4739,13 @@ function escapeHTML(text) {
 
     return div.innerHTML;
 }
+
+
+/* =========================================================
+   M4.1 INITIAL LOAD
+   ========================================================= */
+
+loadAnalytics();
 
 </script>
 
