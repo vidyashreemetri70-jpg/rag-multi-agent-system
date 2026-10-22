@@ -680,6 +680,7 @@ def process_query(query):
             understanding["confidence"],
         retrieval_confidence=
             retrieval_confidence,
+            
         answered=True,
         needs_clarification=False,
         retrieved_documents=
