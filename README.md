@@ -1,3 +1,8 @@
+## Live demo
+Frontend: https://fancy-pasca-877a94.netlify.app
+Note: the full system (backend + local Llama 3.2 via Ollama) runs locally.
+
+
 # Multi-Agent RAG System
 
 A Multi-Agent Retrieval-Augmented Generation (RAG) system with knowledge base ingestion, semantic retrieval, query understanding, response generation, and multi-agent orchestration.
